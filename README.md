@@ -20,8 +20,8 @@ Available Jitter algorithms include:
  - FullJitter
  - EqualJitter
  - DecorrelatedJitter
- 
- 
+
+
  Backoff algorithms include:
  
   - ExponentialBackoff
