@@ -1,0 +1,20 @@
+{
+    "name": "patinthehat/backoffv2",
+    "description": "Backoff algorithms implemented in PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Patrick Organ",
+            "email": "trick.developer@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "BackoffV2\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.5.0"
+    }
+}
