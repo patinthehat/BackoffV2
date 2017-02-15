@@ -5,12 +5,13 @@ php:
   - "5.6"
   - "7.0"
   - "7.1"
-
+  
+matrix:
+  fast_finish: true
+  
 before_script:
- - sudo apt-get update
- - sudo apt-get install php5-cli php5-common php-pear
+ - phpenv config-rm xdebug.ini
  - composer self-update
  - composer install
-
 
 script: phpunit

@@ -2,6 +2,8 @@
 ---
 BackoffV2 is a PHP 5+ library implementing various backoff algorithms, such as exponential backoff.  Supported versions of PHP include 5.5, 5.6, 7.0+.
 
+[![Build Status](https://travis-ci.org/patinthehat/BackoffV2.svg?branch=master)](https://travis-ci.org/patinthehat/BackoffV2)
+
 ---
 #### Installation
 
