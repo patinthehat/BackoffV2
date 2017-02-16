@@ -3,6 +3,7 @@
 use BackoffV2\Backoff;
 use BackoffV2\Backoff\ConstantBackoff;
 use BackoffV2\Backoff\ExponentialBackoff;
+use BackoffV2\Backoff\LinearBackoff;
 use BackoffV2\Jitter\NoJitter;
 
 
@@ -48,6 +49,18 @@ class BackoffTest extends \PHPUnit_Framework_TestCase
         $b->increaseAttempt();
         $this->assertEquals($b->getBackoff(), 2);
     }
+
+    public function testLinearBackoff()
+    {
+        $b = new LinearBackoff(1);
+        $b->increaseAttempt();
+        $this->assertEquals($b->getBackoff(), 1);
+        $b->increaseAttempt();
+        $this->assertEquals($b->getBackoff(), 2);
+        $b->increaseAttempt();
+        $this->assertEquals($b->getBackoff(), 3);
+    }
+
 
     public function testBackoffMainWithExponentialBackoffAndNoJitter()
     {
